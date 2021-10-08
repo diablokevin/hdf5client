@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d216be7"],{c488:function(n,e,c){"use strict";c.r(e);var t=c("7a23");function r(n,e,c,r,u,a){return Object(t["I"])(),Object(t["m"])("h1",null," 这个页面用来展示航班数据，可以让用户选择 ")}var u={name:"FlightSelect"},a=c("6b0d"),o=c.n(a);const b=o()(u,[["render",r]]);e["default"]=b}}]);
+//# sourceMappingURL=chunk-2d216be7.c9ef7302.js.map
