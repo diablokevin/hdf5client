@@ -1,9 +1,11 @@
+import json
 import os
 import time
 from random import randint
 import requests
 from flask import Flask, render_template, jsonify, request
 from flask_cors import CORS
+import model
 
 app = Flask(__name__,
             static_folder="../dist/static",
@@ -65,6 +67,19 @@ def get_hdf5_file_list():
         fileList.append({'name': file_name, 'create_time':file_create_time, 'alter_time':file_alter_time})
     response = {
         'fileList': fileList
+    }
+    return jsonify(response)
+
+
+@app.route('/api/get_hdf5file_briefdata/<filename>')
+def get_hdf5file_briefdata(filename):
+    data = model.Hdf5BriefData()
+    data.tail_no='B-1234'
+    data.flight_no = 'CZ4321'
+    data.city_from = 'CGQ'
+    data.city_to='CAN'
+    response = {
+        'briefData': data.__dict__
     }
     return jsonify(response)
 
